@@ -1,0 +1,8 @@
+.form-input-group {
+  color: red;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+}

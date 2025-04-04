@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800;700&family=Lobster:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lobster:wght@400;500&family=Playfair+Display:wght@400;500&display=swap');
+
+:root {
+  --footer-bg-color: #5cd4f9;
+  --home-bg-color: #eff0e3;
+  --header-font: 'Lobster', sans-serif;
+  --body-font: 'Nunito', sans-serif;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  flex: 1;
+}
+
+.home-container {
+  background-color: var(--home-bg-color);
+  /* background-color: #75d2ec; */
+}
+
+
+
+#title-header {
+  font-family: var(--header-font);
+  font-size: 2.5rem;
+  color: #282c34;
+  margin-top: 5vh;
+}
+
+/* NAV */
+
+nav {
+  min-height: 8vh;
+}
+.nav-bar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Show/hide the nav bar on scroll */
+.hide-nav {
+  transform: translateY(-65%);
+  transition: transform 0.3s ease-in-out;
+}
+.show-nav {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Profile section of nav */
+.profile-pic-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#user-name-nav {
+  font-family: var(--body-font);
+  color: #282c34;
+  margin: 0 2vh 0 0;
+  color: white;
+  font-size: 2vh;
+}
+#profile-pic-nav {
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  margin-right: 1.5vh;
+}
+
+
+/* Home Page */
+
+.home-banner-box {
+  background-image: url('../public/HomeBackground.jpg');
+  height: 100vh;
+  background-position: center;
+  z-index: 0;
+  
+}
+
+.home-success-alert {
+  position: fixed;
+      top: 10vh;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      width: 40vw;
+}
+
+.home-title-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  
+}
+.home-title {
+  /* background-color: #282c34; */
+  color: black;
+  /* text-shadow: 2px 2px 4px #000000; */
+  margin-top: 5vh;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80vw;
+}
+
+.home-prompt-box-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10vh;
+  width: 100vw;
+}
+.google-prompt-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  margin-top: 20px;
+}
+
+.google-maps-handler-container {
+  display: flex;
+  width: 100vw;
+  gap: 5vh;
+}
+
+.us-map {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+}
+.map-container{
+  width: 70vw;
+  height: 50vh;
+  border-radius: 200px;
+  overflow: hidden;
+}
+.map-controls {
+  display: flex;
+  width: 10vw;
+  position: absolute;
+  margin-left: -10vw;
+}
+.google-places-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.google-places-handler-carousel {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+#google-places-handler-carousel-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.map-container {
+  border-radius: 200px;
+}
+
+/* Style for the left carousel arrow */
+.carousel-control-prev {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin-top: 20vh;
+  margin-left: -5vw;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the right carousel arrow */
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+    margin-top: 20vh;
+    margin-right: -5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+}
+
+/* Saved Trips Page */
+
+.saved-trips-page-container {
+  background-color: var(--home-bg-color);
+  min-height: 100vh;
+}
+.list-group-item-hover:hover {
+  background-color: #b8b8b8;
+  cursor: pointer;
+}
+
+.saved-trips-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 5vh;
+  width: 100%;
+}
+#saved-trip-card {
+  width: 18rem;
+}
+#saved-trip-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.saved-card-image{
+  width: 100%;
+  max-height: 15vh;
+  object-fit: cover;
+}
+
+
+/* TRIPS PAGE */
+.trips-page-whole {
+  background-color: var(--home-bg-color);
+  min-height: 95vh;
+  width: 100vw;
+  padding: 1vw;
+}
+.trips-info-container {
+  font-family: var(--body-font);
+}
+.google-map-container-trip {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50vh;
+}
+#google-map-trip {
+  width: 40vw;
+  height: 40vh;
+}
+#trip-photo{
+  width: auto;
+  height: 40vh;
+}
+.itinerary-table {
+  display: flex;
+  justify-content: center;
+  padding: 0 20vw 5vh 20vw;
+  font-family: var(--body-font);
+}
+#trip-delete-btn {
+  margin-top: -4.5vh;
+  float: right;
+}
+.trips-itin-save-btn-container {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+/* Profile Page */
+.profile-page {
+  background-color: var(--home-bg-color);
+  min-height: 93vh;
+}
+
+/* CollabPage */
+.collab-page {
+  background-color: var(--home-bg-color);
+  min-height: 93vh;
+}
+
+/* ALERTS */
+
+.alert-custom-green {
+  background-color: #217935d7;
+  color: white;
+  height: 10vh;
+  transition: opacity 0.3s ease-in-out;
+}
+.alert-custom-green.fade-out {
+  opacity: 0;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+
+/* FOOTER Comp */
+
+footer {
+  background-color: var(--footer-bg-color);
+  color: white;
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+  height: 7.8vh;
+}

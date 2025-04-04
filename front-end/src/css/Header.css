@@ -1,0 +1,34 @@
+.header-whole {
+  /* background-color: rgba(17, 17, 113, 0.906); */
+  background-image: linear-gradient(
+    rgb(17, 17, 113),
+    rgba(17, 17, 113, 0.688),
+    rgba(83, 83, 83, 0.632)
+  );
+  padding: 1vh;
+}
+.header-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10vw 0 10vw;
+}
+
+#page-title {
+  color: white;
+}
+
+.drop-down-menus {
+  width: 70vw;
+}
+.pet-options {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  color: white;
+}
+li:hover {
+  text-decoration: underline;
+}
+.dd-menus:hover {
+}
