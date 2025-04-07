@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Nav from "../components/Nav";
+import { AuthContext } from "../context/AuthContext";
 import {
   Container,
   Row,
@@ -16,11 +17,12 @@ const ProfilePage = () => {
   const [profile, setProfile] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [updatedProfile, setUpdatedProfile] = useState({});
+  const { loginStatus } = useContext(AuthContext);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      window.location.href = "/login";
+    if (loginStatus !== "success") {
+      window.location.href = "/";
+      return;
     } else {
       const fetchProfile = async () => {
         try {
